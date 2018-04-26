@@ -3,10 +3,14 @@ function Account(){
 
 }
 
-Account.prototype.deposit = function(amount){
-  return this.balance += amount;
+Account.prototype.displayBalance = function(){
+  return this.balance;
 };
 
-Account.prototype.withdrawal = function(amount){
-  return this.balance -= amount;
+Account.prototype.deposit = function(credit){
+  return this.balance += credit;
+};
+
+Account.prototype.withdrawal = function(debit){
+  return this.balance -= debit;
 };

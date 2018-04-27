@@ -19,4 +19,8 @@ describe('Account', function(){
     account.withdrawal(100);
     expect(account.displayBalance()).toEqual(100);
   });
+
+  it('throw error if insufficient balance', function(){
+    expect(function(){account.withdrawal(100)}).toThrowError('Insufficient balance');
+  });
 });

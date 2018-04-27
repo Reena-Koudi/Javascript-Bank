@@ -12,5 +12,6 @@ Account.prototype.deposit = function(credit){
 };
 
 Account.prototype.withdrawal = function(debit){
+  if(this.balance < debit) { throw Error('Insufficient balance') };
   return this.balance -= debit;
 };
